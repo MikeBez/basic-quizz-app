@@ -8,12 +8,32 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var questions = [
+      'What\'s your favourite colour?',
+      'what\'s your favourite animal?',
+    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: Text('This is default body Text'),
+        body: Column(
+          children: [
+            Text('The question!'),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('Answer 1'),
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('Answer 2'),
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('Answer 3'),
+            ),
+          ],
+        ),
       ),
     );
   }
